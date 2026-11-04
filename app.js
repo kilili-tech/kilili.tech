@@ -3,6 +3,27 @@
   const $ = (s) => document.querySelector(s);
   const $$ = (s) => Array.from(document.querySelectorAll(s));
   const fmt = (n) => Number(n).toLocaleString("en");
+
+  // ---- Language: English page, French from i18n.js. French phones get French; the EN | FR button switches.
+  const FR = window.KILILI_FR || {};
+  const store = (k, v) => { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch { return null; } };
+  let lang = store("lang") || ((navigator.language || "").toLowerCase().startsWith("fr") ? "fr" : "en");
+  const fr = () => lang === "fr";
+  const TEXT = "nav a, h1 .one-line, h1 .sub-h, h2, p.lead, .tiles span, .steps li, .btn, summary, .faq-item p, .foot p.fine, .copy > p.fine";
+  const original = new WeakMap();
+  let lastStats = null;
+  function applyLang() {
+    document.documentElement.lang = lang;
+    $$(TEXT).forEach((el) => {
+      if (el.matches("[data-build], [data-ver-foot], [data-counter]") || el.querySelector("code")) return;
+      if (!original.has(el)) original.set(el, el.innerHTML.trim());
+      const en = original.get(el);
+      el.innerHTML = fr() && FR[en] ? FR[en] : en;
+    });
+    const b = $("[data-lang]");
+    if (b) { b.textContent = fr() ? "EN" : "FR"; b.setAttribute("aria-label", fr() ? "English" : "Français"); }
+    if (lastStats) showStats(lastStats);
+  }
   const FOUNDING = 1000; // below this, invite founding members instead of showing a small number
 
   // ---- Share
@@ -11,9 +32,14 @@
     const data = { title: "KILILI", text: "Chat, call and sell with no data. Get KILILI free:", url: "https://kilili.tech" };
     try {
       if (navigator.share) await navigator.share(data);
-      else { await navigator.clipboard.writeText(`${data.text} ${data.url}`); share.textContent = "Link copied"; }
+      else { await navigator.clipboard.writeText(`${data.text} ${data.url}`); share.textContent = fr() ? "Lien copié" : "Link copied"; }
     } catch { /* closed */ }
   });
+
+  // ---- Language button
+  const langBtn = document.querySelector("[data-lang]");
+  if (langBtn) langBtn.addEventListener("click", () => { lang = fr() ? "en" : "fr"; store("lang", lang); applyLang(); });
+  applyLang();
 
   // ---- Mobile menu
   const burger = $("[data-burger]"), menu = $("#menu");
@@ -81,10 +107,11 @@
   }
 
   function showStats(s) {
+    lastStats = s;
     const counter = $("[data-counter]"), top = $("[data-top]");
     const named = (s.countries || []).filter((c) => c.country !== "XX");
     if (s.total >= FOUNDING) {
-      counter.innerHTML = `<b>${fmt(s.total)}</b> downloads in <b>${fmt(named.length)}</b> countries`;
+      counter.innerHTML = fr() ? `<b>${fmt(s.total)}</b> téléchargements dans <b>${fmt(named.length)}</b> pays` : `<b>${fmt(s.total)}</b> downloads in <b>${fmt(named.length)}</b> countries`;
       top.replaceChildren(...named.slice(0, 8).map((c) => {
         const li = document.createElement("li");
         li.textContent = map.c[c.country] ? map.c[c.country][2] : c.country;
@@ -92,7 +119,7 @@
         return li;
       }));
     } else if (s.total > 0) {
-      counter.innerHTML = `Founding members wanted: <b>${fmt(FOUNDING - s.total)}</b> places left in the first 1,000.`;
+      counter.innerHTML = fr() ? `Membres fondateurs recherchés : encore <b>${fmt(FOUNDING - s.total)}</b> places parmi les 1 000 premiers.` : `Founding members wanted: <b>${fmt(FOUNDING - s.total)}</b> places left in the first 1,000.`;
     }
     if (map) setHits(named);
     for (const p of s.prices || []) {
@@ -103,7 +130,7 @@
     const L = s.latest;
     if (L) {
       const mb = (L.size / 1048576).toFixed(1);
-      $$("[data-build]").forEach((e) => (e.textContent = `Free · Android 8 or newer · ${mb} MB`));
+      $$("[data-build]").forEach((e) => (e.textContent = fr() ? `Gratuit · Android 8 ou plus récent · ${mb.replace(".", ",")} Mo` : `Free · Android 8 or newer · ${mb} MB`));
       $$("[data-ver], [data-ver-foot]").forEach((e) => (e.textContent = L.version));
       const sha = $("[data-sha]"), sig = $("[data-signer]");
       if (sha) sha.textContent = L.sha256;
