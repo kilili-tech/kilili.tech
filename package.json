@@ -1,0 +1,6 @@
+{
+  "name": "kilili-site",
+  "private": true,
+  "type": "module",
+  "description": "kilili.tech: download KILILI, install steps, passes, download map. Static page + two small functions."
+}

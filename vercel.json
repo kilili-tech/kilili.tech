@@ -1,0 +1,74 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/download",
+      "destination": "/api/download"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/pass",
+      "destination": "https://pass.kilili.tech/",
+      "permanent": false
+    },
+    {
+      "source": "/reps",
+      "destination": "https://pass.kilili.tech/agent",
+      "permanent": false
+    },
+    {
+      "source": "/admin",
+      "destination": "https://pass.kilili.tech/superadmin",
+      "permanent": false
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "strict-transport-security",
+          "value": "max-age=31536000; includeSubDomains"
+        },
+        {
+          "key": "x-frame-options",
+          "value": "DENY"
+        },
+        {
+          "key": "x-content-type-options",
+          "value": "nosniff"
+        },
+        {
+          "key": "referrer-policy",
+          "value": "no-referrer"
+        },
+        {
+          "key": "permissions-policy",
+          "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+        },
+        {
+          "key": "content-security-policy",
+          "value": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'"
+        }
+      ]
+    },
+    {
+      "source": "/apk/(.*)",
+      "headers": [
+        {
+          "key": "content-type",
+          "value": "application/vnd.android.package-archive"
+        },
+        {
+          "key": "content-disposition",
+          "value": "attachment; filename=\"KILILI.apk\""
+        },
+        {
+          "key": "cache-control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    }
+  ]
+}
