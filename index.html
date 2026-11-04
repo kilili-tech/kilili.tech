@@ -2,20 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>KILILI · Your phone is your network</title>
-<meta name="description" content="Chat, share files, make calls, play games and connect with people around you, without mobile internet for supported local features. Free for Android.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KILILI · No data? No problem.</title>
+<meta name="description" content="No data? No problem. Your phone is your network. Connect with people nearby, find friends and share more. Free for Android.">
 <meta name="theme-color" content="#0b0c0d">
 <meta property="og:site_name" content="KILILI">
-<meta property="og:title" content="KILILI · Your phone is your network">
-<meta property="og:description" content="No data? No problem. Chat, share, call and play with people around you, phone to phone.">
+<meta property="og:title" content="KILILI · No data? No problem.">
+<meta property="og:description" content="Your phone is your network. Chat, share, call and play with people nearby, phone to phone, with no data.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://kilili.tech/">
 <meta property="og:image" content="https://kilili.tech/img/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://kilili.tech/">
 <link rel="icon" href="/logo.svg" type="image/svg+xml">
-<link rel="preload" as="image" href="/img/hero-720.webp" imagesrcset="/img/hero-720.webp 720w, /img/hero-1280.webp 1280w" imagesizes="(min-width: 960px) 50vw, 100vw">
+<link rel="preload" as="image" href="/img/art/nodata-720.webp" imagesrcset="/img/art/nodata-720.webp 720w, /img/art/nodata-1080.webp 1080w" imagesizes="(min-width: 960px) 50vw, 100vw">
 <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -23,9 +23,9 @@
   <a class="brand" href="/" aria-label="KILILI home"><img src="/img/logo-white.svg" alt="KILILI" width="128" height="40"></a>
   <nav class="links" id="menu" aria-label="Main">
     <a href="#top">Home</a>
-    <a href="#features">Features</a>
-    <a href="#how">How It Works</a>
-    <a href="#business">Businesses</a>
+    <a href="#more">Features</a>
+    <a href="#network">How It Works</a>
+    <a href="#life">Businesses</a>
     <a href="#faq">FAQ</a>
   </nav>
   <a class="btn btn-sm" href="/download" data-dl>Get KILILI</a>
@@ -33,297 +33,143 @@
 </header>
 
 <main>
-<!-- 2 HERO -->
-<section class="hero dark">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <h1>Your phone is your network.</h1>
-      <p class="kicker"><span>No data? No problem.</span></p>
-      <p class="lead">Chat, share files, make calls, play games and connect with people around you, without mobile internet for supported local features.</p>
-      <div class="ctas">
-        <a class="btn btn-lg" href="/download" data-dl>Download KILILI</a>
-        <a class="btn btn-ghost btn-lg" href="#features">Explore Features</a>
-      </div>
-      <p class="fine" data-build>Free · Android 8 or newer</p>
-      <p class="tagline">Connect with people nearby. Find friends. Share more.</p>
-    </div>
-    <picture class="hero-pic">
-      <source type="image/webp" srcset="/img/hero-720.webp 720w, /img/hero-1280.webp 1280w" sizes="(min-width: 960px) 50vw, 100vw">
-      <img src="/img/hero-720.webp" alt="Three friends laughing together over a phone outdoors" width="1280" height="720" fetchpriority="high">
+<!-- 1. NO DATA? NO PROBLEM. -->
+<section class="screen" id="home">
+  <div class="art">
+    <picture>
+      <source type="image/webp" srcset="/img/art/nodata-720.webp 720w, /img/art/nodata-1080.webp 1080w" sizes="(min-width: 960px) 50vw, 100vw">
+      <img src="/img/art/nodata-720.webp" alt="A woman smiling at her phone on a hillside: No data? No problem." width="1080" height="1080" fetchpriority="high">
     </picture>
+    <a class="hit hit-nodata" href="/download" data-dl aria-label="Download KILILI at kilili.tech"></a>
+  </div>
+  <div class="copy">
+    <h1><span class="lime">No data? No problem.</span><br>Your phone is your network.</h1>
+    <p class="lead">Connect with people nearby, find friends and share more!</p>
+    <a class="btn btn-lg" href="/download" data-dl>Download KILILI</a>
+    <p class="fine" data-build>Free · Android 8 or newer</p>
+    <a class="help-link" href="#install">Phone says the file "can harm your device"? Here's what to tap ›</a>
   </div>
 </section>
 
-<!-- 3 FEATURES -->
-<section class="light" id="features">
-  <div class="wrap">
-    <h2 class="center">Everything you need to connect with people nearby.</h2>
-    <div class="cards">
-      <article class="card"><i class="ic green"><svg viewBox="0 0 24 24"><path d="M4 5h16v10H8l-4 4z"/></svg></i><h3>Chat</h3><p>Send messages and voice notes to friends.</p></article>
-      <article class="card"><i class="ic pink"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4zM7 15l3-4 3 3 2-2 3 3"/></svg></i><h3>Share Files</h3><p>Share photos, videos and other files directly with nearby devices.</p></article>
-      <article class="card"><i class="ic blue"><svg viewBox="0 0 24 24"><path d="M6 3l3 4-2 2a12 12 0 0 0 8 8l2-2 4 3-2 3C10 21 3 14 3 5z"/></svg></i><h3>Make Calls</h3><p>Talk to friends in range, with no airtime.</p></article>
-      <article class="card"><i class="ic orange"><svg viewBox="0 0 24 24"><path d="M7 8h10a4 4 0 0 1 0 8l-2-2H9l-2 2a4 4 0 0 1 0-8zM8 11v3M6.5 12.5h3M16 11h.01M18 13h.01"/></svg></i><h3>Play Games</h3><p>Enjoy Oware, Ludo and daily trivia with people nearby.</p></article>
-      <article class="card"><i class="ic purple"><svg viewBox="0 0 24 24"><path d="M9 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM3 19c0-3 3-5 6-5s6 2 6 5M16 11a2.5 2.5 0 1 0 0-5M17 14c2 .5 4 2 4 5"/></svg></i><h3>Join Rooms</h3><p>Create or join group conversations around you.</p></article>
-      <article class="card"><i class="ic yellow"><svg viewBox="0 0 24 24"><path d="M4 9l2-5h12l2 5M4 9h16v2a3 3 0 0 1-5 2 3 3 0 0 1-6 0 3 3 0 0 1-5-2zM5 13v7h14v-7M10 20v-4h4v4"/></svg></i><h3>Discover Shops</h3><p>Explore nearby businesses, products and services.</p></article>
+<!-- 2. YOUR PHONE IS YOUR NETWORK -->
+<section class="screen alt" id="network">
+  <div class="art">
+    <picture>
+      <source type="image/webp" srcset="/img/art/network-720.webp 720w, /img/art/network-1080.webp 1080w" sizes="(min-width: 960px) 50vw, 100vw">
+      <img src="/img/art/network-720.webp" alt="Three friends laughing over a phone: Your phone is your network." width="1080" height="1080" loading="lazy">
+    </picture>
+    <a class="hit hit-network" href="/download" data-dl aria-label="Download KILILI at kilili.tech"></a>
+  </div>
+  <div class="copy">
+    <h2>Your phone is your network.</h2>
+    <p class="lead">KILILI connects phones directly, by Bluetooth and Wi-Fi. No data bundle, no signal, no SIM needed.</p>
+    <p class="lead">Friends further away? Your message hops from phone to phone until it reaches them.</p>
+  </div>
+</section>
+
+<!-- 3. MORE THAN A CHAT APP -->
+<section class="screen" id="more">
+  <div class="art">
+    <picture>
+      <source type="image/webp" srcset="/img/art/chat-720.webp 720w, /img/art/chat-1080.webp 1080w" sizes="(min-width: 960px) 50vw, 100vw">
+      <img src="/img/art/chat-720.webp" alt="A student smiling at her phone: More than a chat app." width="1080" height="1080" loading="lazy">
+    </picture>
+    <a class="hit hit-chat" href="/download" data-dl aria-label="Download KILILI at kilili.tech"></a>
+  </div>
+  <div class="copy">
+    <h2>More than a chat app.</h2>
+    <ul class="tiles">
+      <li><i class="ic green"></i>Chat &amp; voice notes</li>
+      <li><i class="ic pink"></i>Photos, videos &amp; files</li>
+      <li><i class="ic blue"></i>Calls</li>
+      <li><i class="ic orange"></i>Games: Oware, Ludo</li>
+      <li><i class="ic purple"></i>Rooms &amp; stories</li>
+      <li><i class="ic yellow"></i>Shops &amp; events</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 4. CONNECT WHERE LIFE HAPPENS -->
+<section class="screen alt" id="life">
+  <div class="art">
+    <picture>
+      <source type="image/webp" srcset="/img/art/life-720.webp 720w, /img/art/life-1080.webp 1080w" sizes="(min-width: 960px) 50vw, 100vw">
+      <img src="/img/art/life-720.webp" alt="Friends at an evening concert: Connect where life happens." width="1080" height="1080" loading="lazy">
+    </picture>
+    <a class="hit hit-life" href="/download" data-dl aria-label="Download KILILI at kilili.tech"></a>
+  </div>
+  <div class="copy">
+    <h2>Connect where life happens.</h2>
+    <p class="lead">Campus, market, church, stadium, festival, village. Find events, join rooms and discover the shops around you.</p>
+    <p class="lead">Selling something? Build your shop on your phone with your MoMo number, and let people nearby find you.</p>
+    <a class="btn btn-ghost" href="/pass">Organisers &amp; sellers: get a pass</a>
+  </div>
+</section>
+
+<!-- 5. IT WORKS BETTER TOGETHER -->
+<section class="screen" id="together">
+  <div class="art">
+    <picture>
+      <source type="image/webp" srcset="/img/art/together-720.webp 720w, /img/art/together-1080.webp 1080w" sizes="(min-width: 960px) 50vw, 100vw">
+      <img src="/img/art/together-720.webp" alt="Four friends at sunset sharing a phone: It works better together." width="1080" height="1080" loading="lazy">
+    </picture>
+    <a class="hit hit-together" href="/download" data-dl aria-label="Download KILILI at kilili.tech"></a>
+  </div>
+  <div class="copy">
+    <h2>It works better together.</h2>
+    <p class="lead">Every friend with KILILI carries your messages further. Send KILILI to a friend's phone in seconds, with no data: tap <b>Invite friends</b>.</p>
+    <button class="btn btn-lg" type="button" data-share>Share KILILI</button>
+    <div class="mini-map">
+      <canvas id="map" width="1080" height="440" aria-label="World map of KILILI downloads"></canvas>
+      <p class="counter" data-counter>Founding members wanted: be one of the first 1,000.</p>
+      <ul class="top-countries" data-top></ul>
     </div>
   </div>
 </section>
 
-<!-- 2b APP IN ACTION -->
-<section class="dark">
-  <div class="wrap">
-    <h2 class="center">See what you can do with KILILI.</h2>
-    <picture class="wide-pic">
-      <source type="image/webp" srcset="/img/inaction-720.webp 720w, /img/inaction-1280.webp 1280w" sizes="(min-width: 1120px) 1088px, 100vw">
-      <img src="/img/inaction-720.webp" alt="People chatting, sharing files and watching videos on their phones" width="1280" height="720" loading="lazy">
+<!-- 6. ONE DOWNLOAD CAN START A MOVEMENT -->
+<section class="screen alt" id="install">
+  <div class="art">
+    <picture>
+      <source type="image/webp" srcset="/img/art/movement-720.webp 720w, /img/art/movement-1080.webp 1080w" sizes="(min-width: 960px) 50vw, 100vw">
+      <img src="/img/art/movement-720.webp" alt="Friends smiling at a phone: One download can start a movement." width="1080" height="1080" loading="lazy">
     </picture>
+    <a class="hit hit-movement" href="/download" data-dl aria-label="Download KILILI at kilili.tech"></a>
   </div>
-</section>
-
-<!-- 4 HOW IT WORKS -->
-<section class="light" id="how">
-  <div class="wrap">
-    <h2 class="center">Getting started is simple.</h2>
+  <div class="copy">
+    <h2>One download can start a movement.</h2>
+    <a class="btn btn-lg" href="/download" data-dl>Download KILILI</a>
     <ol class="steps">
-      <li><h3>Download</h3><p>Get KILILI for your Android phone.</p></li>
-      <li><h3>Create your account</h3><p>Open KILILI, tap <b>I'm new</b>, pick your name and a recovery password. Add your phone number if you want friends to find you by it.</p></li>
-      <li><h3>Connect nearby</h3><p>Turn on Bluetooth and Wi-Fi and allow the permissions. People near you appear at the top of Chats.</p></li>
-      <li><h3>Start connecting</h3><p>Chat, share files, play games and explore everything around you.</p></li>
+      <li>Tap <b>Download KILILI</b>. If Chrome warns you, tap <b>Download anyway</b>.</li>
+      <li>Open the file. If asked, switch on <b>Allow from this source</b>, then go back.</li>
+      <li>Tap <b>Install</b>, then <b>Open</b>. Turn on Bluetooth. Done.</li>
     </ol>
-    <div class="center"><a class="btn btn-lg" href="/download" data-dl>Download KILILI</a></div>
-    <details class="faq-item install">
-      <summary>Step-by-step install help (Android warnings explained)</summary>
-      <ol class="plain">
-        <li>Tap <b>Download KILILI</b>. If Chrome says <i>"This type of file can harm your device"</i>, tap <b>Download anyway</b>.</li>
-        <li>Open the file from the notification, or from <b>Files → Downloads → KILILI.apk</b>.</li>
-        <li>If Android says it is <i>"not allowed to install unknown apps from this source"</i>, tap <b>Settings</b>, switch on <b>Allow from this source</b>, then press <b>Back</b>.</li>
-        <li>Tap <b>Install</b>. If Play Protect warns you, tap <b>More details → Install anyway</b>.</li>
-        <li>Tap <b>Open</b> and allow <b>Nearby devices</b>, <b>Location</b> and <b>Notifications</b>.</li>
-      </ol>
-      <p class="fine">Android shows these warnings for every app installed from outside Play Store. KILILI is signed with its own permanent key; you can check your copy below in "Keep your account safe".</p>
-    </details>
+    <p class="fine">Android warns about every app that doesn't come from Play Store. KILILI is safe: <a href="#genuine">check your copy</a>.</p>
   </div>
 </section>
 
-<!-- 5 YOUR PHONE IS YOUR NETWORK -->
-<section class="dark split">
-  <div class="wrap split-grid">
-    <picture class="pic">
-      <source type="image/webp" srcset="/img/nearby-720.webp 720w, /img/nearby-1280.webp 1280w" sizes="(min-width: 960px) 50vw, 100vw">
-      <img src="/img/nearby-720.webp" alt="Friends standing close together, their phones connected to each other" width="1280" height="720" loading="lazy">
-    </picture>
-    <div>
-      <h2>Your phone is your network.</h2>
-      <p class="lead">KILILI helps nearby phones connect directly. Supported local features work without mobile data or an internet connection.</p>
-      <ul class="ticks">
-        <li>Discover people nearby.</li>
-        <li>Exchange messages when phones are in range, and further through friends' phones.</li>
-        <li>Share files without using mobile data.</li>
-        <li>Connect in places where internet access is unavailable.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- 6 NO NETWORK AREAS -->
-<section class="light split">
-  <div class="wrap split-grid rev">
-    <picture class="pic">
-      <source type="image/webp" srcset="/img/nonetwork-720.webp 720w, /img/nonetwork-1280.webp 1280w" sizes="(min-width: 960px) 50vw, 100vw">
-      <img src="/img/nonetwork-720.webp" alt="A family in a village with no mobile signal, connected on one phone" width="1280" height="720" loading="lazy">
-    </picture>
-    <div>
-      <h2>No data? No problem.</h2>
-      <p class="lead">At home, in your community, on campus or where internet access is limited, KILILI helps you connect with people nearby through direct phone-to-phone features.</p>
-      <p class="accent-line">Your connection starts with the people around you.</p>
-      <a class="btn btn-lg" href="#features">Discover KILILI</a>
-    </div>
-  </div>
-</section>
-
-<!-- WORLD MAP (live download counter) -->
-<section class="dark map-wrap" id="world">
-  <div class="wrap">
-    <h2 class="center">KILILI around the world</h2>
-    <p class="counter center" data-counter>Founding members wanted: be one of the first 1,000.</p>
-    <canvas id="map" width="1080" height="440" aria-label="World map of KILILI downloads"></canvas>
-    <ul class="top-countries" data-top></ul>
-    <p class="fine center">We count downloads from this site by country, and nothing else: no IP addresses, no tracking, no ads. Phones that share KILILI with each other never show up here.</p>
-  </div>
-</section>
-
-<!-- 7 CHAT AND SHARE -->
-<section class="light split">
-  <div class="wrap split-grid">
-    <picture class="pic">
-      <source type="image/webp" srcset="/img/chat-720.webp 720w, /img/chat-1280.webp 1280w" sizes="(min-width: 960px) 50vw, 100vw">
-      <img src="/img/chat-720.webp" alt="A student sending messages, voice notes, photos and files" width="1280" height="720" loading="lazy">
-    </picture>
-    <div>
-      <h2>Conversations. Photos. Files. All in one place.</h2>
-      <p class="lead">Message friends, send voice notes, share photos and videos, and transfer files to nearby devices without using mobile data.</p>
-      <ul class="chips">
-        <li>Text messages</li><li>Voice notes</li><li>Photos and videos</li><li>View-once photos</li><li>Disappearing messages</li><li>Nearby file transfers</li>
-      </ul>
-      <a class="btn btn-ghost-dark btn-lg" href="#features">Explore Features</a>
-    </div>
-  </div>
-</section>
-
-<!-- 8 FIND AND INVITE -->
-<section class="dark split">
-  <div class="wrap split-grid rev">
-    <picture class="pic">
-      <source type="image/webp" srcset="/img/hero-720.webp 720w, /img/hero-1280.webp 1280w" sizes="(min-width: 960px) 50vw, 100vw">
-      <img src="/img/hero-720.webp" alt="Friends looking at a phone together" width="1280" height="720" loading="lazy">
-    </picture>
-    <div>
-      <h2>Find your people. Bring them to KILILI.</h2>
-      <p class="lead">Add your phone number so friends can find and invite you. It's optional, and KILILI never publishes it for everyone to see.</p>
-      <ul class="ticks">
-        <li>Add friends by phone number: KILILI sends the invite from your own SMS app.</li>
-        <li>See who is around you right now and add them in one tap.</li>
-        <li>Scan a friend's code when you meet.</li>
-        <li>Send KILILI itself to a friend's phone, with no data.</li>
-      </ul>
-      <button class="btn btn-lg" type="button" data-share>Share KILILI</button>
-    </div>
-  </div>
-</section>
-
-<!-- 9 BUSINESS -->
-<section class="light split" id="business">
-  <div class="wrap split-grid">
-    <picture class="pic">
-      <source type="image/webp" srcset="/img/business-720.webp 720w, /img/business-1280.webp 1280w" sizes="(min-width: 960px) 50vw, 100vw">
-      <img src="/img/business-720.webp" alt="A market trader showing her shop on a phone to a customer" width="1280" height="720" loading="lazy">
-    </picture>
-    <div>
-      <h2>Bring your business closer.</h2>
-      <p class="lead">KILILI helps local businesses show their products and services to people nearby.</p>
-      <ul class="ticks">
-        <li>Create your shop page on your phone.</li>
-        <li>Add products, photos, prices and your MoMo number.</li>
-        <li>People nearby discover your business.</li>
-        <li>Receive enquiries and orders through chats.</li>
-      </ul>
-      <a class="btn btn-lg" href="#passes">Get a seller pass</a>
-    </div>
-  </div>
-</section>
-
-<!-- PASSES (live prices from the pass desk) -->
-<section class="dark" id="passes">
-  <div class="wrap">
-    <h2 class="center">Organise or sell? Get a pass.</h2>
-    <p class="lead center narrow">KILILI is free for everyone. Passes are for people who earn with KILILI. Pay once with Mobile Money and get a code; after that it works with no internet, only on your phone.</p>
-    <div class="passes">
-      <article class="pass"><h3>Organiser pass</h3><p class="price"><span data-price="1">GHS 50</span> <small>/ <span data-days="1">30</span> days</small></p><ul><li>Unlimited tickets per event (free events stop at 50)</li><li>For churches, promoters, schools and clubs</li></ul><a class="btn" href="/pass">Pay with MoMo</a></article>
-      <article class="pass"><h3>Hustle Pro</h3><p class="price"><span data-price="2">GHS 15</span> <small>/ <span data-days="2">30</span> days</small></p><ul><li>Order book: every order from your chats, with paid and ready marks</li><li>Sales totals by day and week</li></ul><a class="btn" href="/pass">Pay with MoMo</a></article>
-    </div>
-    <p class="fine center">You need your pass ID: in KILILI open <b>Passes</b> and tap <b>Copy pass ID</b>. You approve the MoMo prompt on your own phone. A real KILILI rep never asks you to send money to their personal number.</p>
-  </div>
-</section>
-
-<!-- 10 EVENTS -->
-<section class="light split">
-  <div class="wrap split-grid rev">
-    <picture class="pic">
-      <source type="image/webp" srcset="/img/events-720.webp 720w, /img/events-1280.webp 1280w" sizes="(min-width: 960px) 50vw, 100vw">
-      <img src="/img/events-720.webp" alt="Friends at an outdoor festival looking at a phone" width="1280" height="720" loading="lazy">
-    </picture>
-    <div>
-      <h2>Connect where life happens.</h2>
-      <p class="lead">From campus gatherings to festivals, concerts and community events, KILILI helps people nearby find each other and interact.</p>
-      <ul class="ticks">
-        <li>Discover events, with covers, times, places and prices.</li>
-        <li>Tickets checked at the gate, with no internet.</li>
-        <li>Join rooms and group conversations.</li>
-        <li>Connect with people nearby.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- 11 GAMES -->
-<section class="dark split">
-  <div class="wrap split-grid">
-    <picture class="pic">
-      <source type="image/webp" srcset="/img/games-720.webp 720w, /img/games-1280.webp 1280w" sizes="(min-width: 960px) 50vw, 100vw">
-      <img src="/img/games-720.webp" alt="Friends playing Oware and Ludo, on the table and on a phone" width="1280" height="720" loading="lazy">
-    </picture>
-    <div>
-      <h2>Play together. Talk together.</h2>
-      <p class="lead">Make nearby connections more fun with games, rooms and social interaction.</p>
-      <ul class="chips dark-chips">
-        <li>Oware</li><li>Ludo</li><li>Daily trivia</li><li>Group rooms</li><li>Stories and posts</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- 12 ACCOUNT SAFETY -->
-<section class="light split" id="safety">
-  <div class="wrap split-grid rev">
-    <picture class="pic">
-      <source type="image/webp" srcset="/img/safety-720.webp 720w, /img/safety-1280.webp 1280w" sizes="(min-width: 960px) 50vw, 100vw">
-      <img src="/img/safety-720.webp" alt="A woman protecting her account on her phone" width="1280" height="720" loading="lazy">
-    </picture>
-    <div>
-      <h2>Keep your account safe.</h2>
-      <p class="lead">Your account is a key on your phone, not on a company server. Protect your recovery password and keep your account file. Together they restore your account if you lose your phone or move to a new one.</p>
-      <ul class="ticks">
-        <li>KILILI saves your account file to <b>Downloads/KILILI</b> every day.</li>
-        <li>On a new phone: tap <b>I already have an account</b>, choose the file, type your password.</li>
-        <li>Nobody else can read your chats: messages are locked for the person you send them to.</li>
-      </ul>
-      <details class="faq-item genuine">
-        <summary>Check your download is genuine</summary>
-        <p>Version: <code data-ver>beta 137</code></p>
-        <p>File fingerprint (SHA-256):<br><code class="wrap-code" data-sha>e0842c4e4dd9d5af314e649fb6567a210a4495042641fc9bfe3b4a61ea2114ea</code></p>
-        <p>KILILI signing key (SHA-256):<br><code class="wrap-code" data-signer>12:3B:EA:75:86:BD:75:96:CA:C6:14:AE:E9:AA:D2:DC:93:97:C1:AF:98:F0:9D:20:91:39:FE:0B:81:1C:8A:18</code></p>
-        <p class="fine">If a copy of KILILI you got from someone else shows a different signing key, don't install it.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- 13 FINAL CTA -->
-<section class="dark split cta-final">
-  <div class="wrap split-grid">
-    <div>
-      <h2>Ready to connect differently?</h2>
-      <p class="lead">Discover a new way to chat, share, play and connect with people around you.</p>
-      <a class="btn btn-lg" href="/download" data-dl>Download KILILI</a>
-      <p class="fine" data-build>For Android 8 and newer.</p>
-    </div>
-    <picture class="pic">
-      <source type="image/webp" srcset="/img/download-720.webp 720w, /img/download-1280.webp 1280w" sizes="(min-width: 960px) 50vw, 100vw">
-      <img src="/img/download-720.webp" alt="A woman installing KILILI on her Android phone" width="1280" height="720" loading="lazy">
-    </picture>
-  </div>
-</section>
-
-<!-- 14 FAQ -->
-<section class="light" id="faq">
+<!-- FAQ + SAFETY -->
+<section class="tail" id="faq">
   <div class="wrap narrow">
-    <h2 class="center">Questions</h2>
-    <details class="faq-item"><summary>What is KILILI?</summary><p>KILILI is an app for chatting, sharing files, making calls, posting stories, playing games and connecting with people nearby, phone to phone.</p></details>
-    <details class="faq-item"><summary>Does KILILI require mobile data?</summary><p>No. Chat, calls, file sharing, stories, rooms, events and games with people nearby work over Bluetooth and Wi-Fi between phones, with no mobile data or internet. Messages to friends further away hop through other KILILI phones, so they arrive when a path of phones exists. Buying a pass on this website uses the internet.</p></details>
-    <details class="faq-item"><summary>How do people find me on KILILI?</summary><p>People in range see you at the top of their Chats screen. You can also add your phone number (optional) so friends can invite you by number: the invite goes from your own SMS app, and your number is not published for everyone.</p></details>
-    <details class="faq-item"><summary>Can I find people nearby?</summary><p>Yes. Install KILILI, create your account, turn on Bluetooth and Wi-Fi and allow the permissions. People near you appear under <b>Around you now</b> at the top of Chats.</p></details>
-    <details class="faq-item"><summary>Can I share large files?</summary><p>Yes, with phones near you. Turn on Wi-Fi on both phones for the fastest transfers.</p></details>
-    <details class="faq-item"><summary>Does KILILI work on iPhone?</summary><p>Not yet. KILILI runs on Android 8 and newer; the iPhone version is coming.</p></details>
-    <details class="faq-item"><summary>What happens if I lose my phone?</summary><p>Install KILILI on the new phone, tap <b>I already have an account</b>, choose your account file and type your recovery password. Without the file and password the account cannot be recovered, because no company holds a copy.</p></details>
-    <details class="faq-item"><summary>Already have an old KILILI test version?</summary><p>In the old app, save your account file (Me → Back up or move to a new phone). Uninstall it, install this one, tap <b>I already have an account</b> and pick the file from Downloads/KILILI.</p></details>
+    <h2>Questions</h2>
+    <details class="faq-item"><summary>Does KILILI really work with no data?</summary><p>Yes. Chats, calls, photos, files, rooms, events and games with people near you go phone to phone over Bluetooth and Wi-Fi. No data bundle, no airtime, no signal. Friends further away get your message when phones in between carry it.</p></details>
+    <details class="faq-item"><summary>How do people find me?</summary><p>People near you see you at the top of their Chats. You can also add your phone number (optional) so friends can invite you by number; it isn't shown to everyone.</p></details>
+    <details class="faq-item"><summary>Is it safe and private?</summary><p>Your account lives on your phone, not on a company server. Messages are locked so only the person you send them to can read them. No ads, no tracking.</p></details>
+    <details class="faq-item"><summary>What if I lose my phone?</summary><p>KILILI saves your account file to Downloads/KILILI every day. On a new phone, tap <b>Sign in</b>, choose the file and type your password.</p></details>
+    <details class="faq-item"><summary>iPhone?</summary><p>Coming. KILILI runs on Android 8 and newer today.</p></details>
+    <details class="faq-item" id="genuine"><summary>Check your download is genuine</summary>
+      <p>Version: <code data-ver>beta 137</code></p>
+      <p>File fingerprint (SHA-256):<br><code class="wrap-code" data-sha>e0842c4e4dd9d5af314e649fb6567a210a4495042641fc9bfe3b4a61ea2114ea</code></p>
+      <p>KILILI signing key (SHA-256):<br><code class="wrap-code" data-signer>12:3B:EA:75:86:BD:75:96:CA:C6:14:AE:E9:AA:D2:DC:93:97:C1:AF:98:F0:9D:20:91:39:FE:0B:81:1C:8A:18</code></p>
+    </details>
   </div>
 </section>
 </main>
 
 <footer class="foot">
   <div class="wrap foot-grid">
-    <div><img src="/img/logo-white.svg" alt="KILILI" width="112" height="35"><p class="fine">Your phone is your network.</p></div>
-    <nav aria-label="Footer"><a href="#features">Features</a><a href="#how">How It Works</a><a href="#business">Businesses</a><a href="#passes">Passes</a><a href="#faq">FAQ</a><a href="/reps">Reps</a></nav>
+    <div><img src="/img/logo-white.svg" alt="KILILI" width="112" height="35"><p class="fine">No data? No problem.</p></div>
+    <nav aria-label="Footer"><a href="#more">Features</a><a href="#network">How It Works</a><a href="/pass">Passes</a><a href="#faq">FAQ</a><a href="/reps">Reps</a></nav>
     <div><a href="mailto:info@kilili.tech">info@kilili.tech</a><p class="fine" data-ver-foot>beta 137</p></div>
   </div>
 </footer>
