@@ -1,17 +1,23 @@
+/* Nunito: rounded, soft terminals like the KILILI wordmark (SIL Open Font Licence, fonts/OFL-Nunito.txt). */
+@font-face { font-family: "Nunito"; font-weight: 600; font-style: normal; font-display: swap; src: url("/fonts/nunito-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Nunito"; font-weight: 800; font-style: normal; font-display: swap; src: url("/fonts/nunito-latin-800-normal.woff2") format("woff2"); }
+@font-face { font-family: "Nunito"; font-weight: 900; font-style: normal; font-display: swap; src: url("/fonts/nunito-latin-900-normal.woff2") format("woff2"); }
 :root {
   --black: #0b0c0d; --charcoal: #141618; --card: #1c1f22; --line: #2b2f33;
   --text: #f2f4f1; --muted: #a9b0aa; --lime: #c9f20f; --ink: #0f1011;
   --green: #22c55e; --pink: #ec4899; --blue: #3b82f6; --orange: #f97316; --purple: #8b5cf6; --yellow: #f5b70b;
-  --font: ui-rounded, "SF Pro Rounded", "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font: "Nunito", ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
   --nav: 64px;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: var(--nav); }
-body { margin: 0; font: 17px/1.55 var(--font); color: var(--text); background: var(--black); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body { margin: 0; font: 600 17px/1.55 var(--font); color: var(--text); background: var(--black); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 img { display: block; max-width: 100%; }
 a { color: var(--lime); }
 h1, h2 { margin: 0 0 .4em; line-height: 1.05; letter-spacing: -.025em; font-weight: 900; }
-h1 { font-size: clamp(32px, 8.4vw, 60px); text-transform: uppercase; }
+h1 { font-size: clamp(26px, 6.9vw, 46px); text-transform: uppercase; }
+h1 .one-line { display: block; white-space: nowrap; }
+h1 .sub-h { display: block; font-size: .78em; margin-top: .15em; }
 h2 { font-size: clamp(30px, 7.6vw, 52px); }
 p { margin: 0 0 .9em; }
 .lime { color: var(--lime); }
@@ -56,14 +62,13 @@ code { font: 13px/1.5 ui-monospace, Menlo, monospace; background: var(--card); p
 .hit-together { left: 4.6%; top: 80.5%; width: 38.8%; height: 13.7%; }
 .hit-movement { left: 3.8%; top: 76.6%; width: 40%; height: 13.5%; }
 .copy .btn-lg { margin-top: 6px; }
-.help-link { display: inline-block; margin-top: 8px; font-size: 15px; font-weight: 700; text-decoration: none; }
 
-/* Feature tiles */
-.tiles { list-style: none; padding: 0; margin: 8px 0 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.tiles li { display: flex; align-items: center; gap: 10px; background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 12px; font-weight: 700; font-size: 15px; line-height: 1.25; }
-.ic { flex: none; width: 30px; height: 30px; border-radius: 10px; }
-.ic.green { background: var(--green); } .ic.pink { background: var(--pink); } .ic.blue { background: var(--blue); }
-.ic.orange { background: var(--orange); } .ic.purple { background: var(--purple); } .ic.yellow { background: var(--yellow); }
+
+/* Feature tiles: a photo and a few words each */
+.tiles { list-style: none; padding: 0; margin: 10px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.tiles li { background: var(--card); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; font-weight: 800; font-size: 14px; line-height: 1.2; text-align: center; }
+.tiles img { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; }
+.tiles span { display: block; padding: 10px 8px 12px; }
 
 /* Install steps */
 .steps { margin: 18px 0 0; padding-left: 22px; color: #d7ddd7; }
@@ -101,7 +106,10 @@ code { font: 13px/1.5 ui-monospace, Menlo, monospace; background: var(--card); p
 @media (max-width: 900px) {
   .screen { grid-template-columns: 1fr; gap: 0; padding: 0 0 36px; align-content: start; }
   .art { border-radius: 0; box-shadow: none; }
-  .copy { padding: 22px 20px 0; }
+  .copy { padding: 22px 20px 0; text-align: center; }
+  .copy .lead { margin-left: auto; margin-right: auto; }
+  .steps { text-align: left; display: inline-block; }
+  .top-countries { justify-content: center; }
   .copy .btn-lg { width: 100%; }
   .copy .btn-ghost { width: 100%; }
 }
@@ -113,7 +121,7 @@ code { font: 13px/1.5 ui-monospace, Menlo, monospace; background: var(--card); p
   .links.open { display: flex; }
   .links a { padding: 14px 0; font-size: 18px; color: var(--text); border-bottom: 1px solid var(--line); }
   .lead { font-size: 17px; }
-  h1 { font-size: 29px; }
+  h1 { font-size: 7.1vw; }
   h2 { font-size: 30px; }
   .screen { padding-bottom: 28px; }
   .copy { padding-top: 18px; }
