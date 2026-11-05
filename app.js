@@ -21,7 +21,7 @@
       el.innerHTML = fr() && FR[en] ? FR[en] : en;
     });
     const b = $("[data-lang]");
-    if (b) { b.textContent = fr() ? "EN" : "FR"; b.setAttribute("aria-label", fr() ? "English" : "Français"); }
+    if (b) { b.textContent = fr() ? "EN" : "FR"; b.setAttribute("aria-label", fr() ? "EN, English" : "FR, Français"); }
     if (lastStats) showStats(lastStats);
   }
   const FOUNDING = 1000; // below this, invite founding members instead of showing a small number
