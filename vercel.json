@@ -74,6 +74,15 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
+    },
+    {
+      "source": "/apk/KILILI-Bridge.apk",
+      "headers": [
+        {
+          "key": "content-disposition",
+          "value": "attachment; filename=\"KILILI-Bridge.apk\""
+        }
+      ]
     }
   ]
 }
