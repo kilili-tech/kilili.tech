@@ -21,6 +21,11 @@
       "source": "/admin",
       "destination": "https://pass.kilili.tech/superadmin",
       "permanent": false
+    },
+    {
+      "source": "/bridge",
+      "destination": "/apk/KILILI-Bridge.apk",
+      "permanent": false
     }
   ],
   "headers": [
