@@ -81,6 +81,10 @@
         {
           "key": "content-disposition",
           "value": "attachment; filename=\"KILILI-Bridge.apk\""
+        },
+        {
+          "key": "cache-control",
+          "value": "no-cache"
         }
       ]
     }
